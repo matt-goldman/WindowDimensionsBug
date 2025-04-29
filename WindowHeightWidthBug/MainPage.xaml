@@ -16,68 +16,68 @@
                 x:Name="TableHeader"
                 Text="Current height and width:"
                 SemanticProperties.HeadingLevel="Level2" />
-            
+
             <Grid ColumnDefinitions="*,*,*"
                   RowDefinitions="*,*,*"
                   MinimumHeightRequest="300">
-                
+
                 <Label
                     x:Name="WidthLabel"
                     Grid.Column="0"
                     Grid.Row="1"
                     Text="Width:"
                     SemanticProperties.HeadingLevel="Level2" />
-                
+
                 <Label
                     x:Name="HeightLabel"
                     Grid.Column="0"
                     Grid.Row="2"
                     Text="Height:"
                     SemanticProperties.HeadingLevel="Level2" />
-                
+
                 <Label
                     x:Name="WindowHeaderLabel"
                     Grid.Column="1"
                     Grid.Row="0"
                     Text="Window"
                     SemanticProperties.HeadingLevel="Level2" />
-                
+
                 <Label
                     x:Name="PageHeaderLabel"
                     Grid.Column="2"
                     Grid.Row="0"
                     Text="Page"
                     SemanticProperties.HeadingLevel="Level2" />
-                
+
                 <Label
                     x:Name="WindowHeight"
                     Grid.Column="1"
-                    Grid.Row="1"
+                    Grid.Row="2"
                     SemanticProperties.HeadingLevel="Level2" />
-                
+
                 <Label
                     x:Name="PageHeight"
                     Grid.Column="2"
-                    Grid.Row="1"
+                    Grid.Row="2"
                     SemanticProperties.HeadingLevel="Level2" />
-                
+
                 <Label
                     x:Name="WindowWidth"
                     Grid.Column="1"
-                    Grid.Row="2"
+                    Grid.Row="1"
                     SemanticProperties.HeadingLevel="Level2" />
-                
+
                 <Label
                     x:Name="PageWidth"
                     Grid.Column="2"
-                    Grid.Row="2"
+                    Grid.Row="1"
                     SemanticProperties.HeadingLevel="Level2" />
-                    
+
             </Grid>
-            
+
             <Button
                 x:Name="HeightButton"
-                Text="Get dimensions" 
+                Text="Get dimensions"
                 SemanticProperties.Hint="Gets the current height and width as reported by both MainPage and MainWindow"
                 Clicked="OnGetDimensionsClicked"
                 HorizontalOptions="Fill" />
