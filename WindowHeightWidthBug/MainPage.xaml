@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WindowHeightWidthBug.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label
+                Text="Height and width checker"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                x:Name="TableHeader"
+                Text="Current height and width:"
+                SemanticProperties.HeadingLevel="Level2" />
+            
+            <Grid ColumnDefinitions="*,*,*"
+                  RowDefinitions="*,*,*"
+                  MinimumHeightRequest="300">
+                
+                <Label
+                    x:Name="WidthLabel"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Text="Width:"
+                    SemanticProperties.HeadingLevel="Level2" />
+                
+                <Label
+                    x:Name="HeightLabel"
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    Text="Height:"
+                    SemanticProperties.HeadingLevel="Level2" />
+                
+                <Label
+                    x:Name="WindowHeaderLabel"
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    Text="Window"
+                    SemanticProperties.HeadingLevel="Level2" />
+                
+                <Label
+                    x:Name="PageHeaderLabel"
+                    Grid.Column="2"
+                    Grid.Row="0"
+                    Text="Page"
+                    SemanticProperties.HeadingLevel="Level2" />
+                
+                <Label
+                    x:Name="WindowHeight"
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    SemanticProperties.HeadingLevel="Level2" />
+                
+                <Label
+                    x:Name="PageHeight"
+                    Grid.Column="2"
+                    Grid.Row="1"
+                    SemanticProperties.HeadingLevel="Level2" />
+                
+                <Label
+                    x:Name="WindowWidth"
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    SemanticProperties.HeadingLevel="Level2" />
+                
+                <Label
+                    x:Name="PageWidth"
+                    Grid.Column="2"
+                    Grid.Row="2"
+                    SemanticProperties.HeadingLevel="Level2" />
+                    
+            </Grid>
+            
+            <Button
+                x:Name="HeightButton"
+                Text="Get dimensions" 
+                SemanticProperties.Hint="Gets the current height and width as reported by both MainPage and MainWindow"
+                Clicked="OnGetDimensionsClicked"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
